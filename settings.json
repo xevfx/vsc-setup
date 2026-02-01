@@ -1,0 +1,107 @@
+{
+    "editor.semanticHighlighting.enabled": true,
+    
+    "workbench.colorTheme": "Tokyo City No Italic",
+    "workbench.colorCustomizations": {
+        // Example: make the sidebar foreground text brighter
+        "[Tokyo City No Italic]": {
+            // General UI contrast: makes borders and separators more visible
+            "contrastBorder": "#e7e9ff",
+            "widget.border": "#d3d5e0",
+
+            // Activity Bar (leftmost icons bar) background
+            "activityBar.background": "#23252d",
+            // Sidebar (file explorer) background and inactive file names
+            "sideBar.background": "#181f24",
+            // "list.inactiveForeground": "#a9b1d6", // Brighter gray for dimmed file names
+
+            "panelTitle.activeForeground": "#a4c1ff",
+            "panelTitle.inactiveForeground": "#858cb2",
+            
+            // Status Bar (bottom bar)
+            "statusBar.background": "#1a1b26",
+            "statusBar.foreground": "#afc4f1", // Brighter text color
+            "statusBar.debuggingBackground": "#849d38",
+
+            // Tabs Background
+            "editorGroupHeader.tabsBackground": "#171d23",
+
+            // Background color of the right-click menu itself
+            "menu.background": "#232328", 
+            // Text color of the menu items
+            "menu.foreground": "#eed7fa",
+            // Color when hovering over an item (the active selection)
+            "menu.selectionBackground": "#1f2e3a", 
+            // Text color when hovering over an item
+            "menu.selectionForeground": "#ffffff",
+            
+            "terminal.foreground": "#a0dbfb",
+
+
+            // Background color of text that is actively selected/highlighted by the user
+            "editor.selectionBackground": "#b08bea3d" 
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Tokyo City No Italic]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "comment",
+                        "comment.block.documentation"
+                    ],
+                    "settings": {
+                        "foreground": "#787C99"
+                    }
+                },
+                {
+                    "scope": [
+                    "keyword",
+                    "keyword.control",
+                    "storage.type"
+                    ],
+                    "settings": { "foreground": "#7aa2f7" }
+                },
+                {
+                    "scope": [
+                    "variable",
+                    "variable.other",
+                    "identifier"
+                    ],
+                    "settings": { "foreground": "#c0caf5" }
+                },
+                {
+                    "scope": ["variable.parameter"],
+                    "settings": { "foreground": "#9ece6a" }
+                },
+                {
+                    "scope": ["entity.name.function", "support.function"],
+                    "settings": { "foreground": "#7aa2f7" }
+                },
+                {
+                    "scope": ["entity.name.type", "support.type", "storage.type"],
+                    "settings": { "foreground": "#ffd580" }
+                },
+                {
+                    "scope": ["string", "constant.character", "constant.other"],
+                    "settings": { "foreground": "#98c379" }
+                }
+                ]
+            }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "variable": "#c8cbd6",
+            "parameter": "#9ece6a",
+            "function": "#aec6fa",
+            "method": "#c4d5f9",
+            "property": "#9fb6ff",
+            "class": "#ffebc3",
+            "type": "#ffd580",
+            "namespace": "#ffd580",
+            "string": "#98c379"
+        }
+    },
+    "window.titleBarStyle": "custom"
+}

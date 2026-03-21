@@ -45,8 +45,8 @@
         // Example: make the sidebar foreground text brighter
         "[Tokyo City No Italic]": {
             // General UI contrast: makes borders and separators more visible
-            "contrastBorder": "#e7e9ff",
-            "widget.border": "#d3d5e0",
+            "contrastBorder": "#2b2d3f",
+            //"widget.border": "#0026ff",
 
             // Activity Bar (leftmost icons bar) background
             "activityBar.background": "#23252d",
@@ -55,26 +55,26 @@
             // "list.inactiveForeground": "#a9b1d6", // Brighter gray for dimmed file names
 
             "panelTitle.activeForeground": "#a4c1ff",
-            "panelTitle.inactiveForeground": "#858cb2",
+            "panelTitle.inactiveForeground": "#959bc2",
             
             // Status Bar (bottom bar)
-            "statusBar.background": "#1a1b26",
-            "statusBar.foreground": "#afc4f1", // Brighter text color
+            "statusBar.background": "#20212e",
+            "statusBar.foreground": "#93a3c4", // Brighter text color
             "statusBar.debuggingBackground": "#849d38",
 
             // Tabs Background
             "editorGroupHeader.tabsBackground": "#171d23",
 
             // Background color of the right-click menu itself
-            "menu.background": "#232328", 
+            "menu.background": "#581e35", 
             // Text color of the menu items
-            "menu.foreground": "#eed7fa",
+            "menu.foreground": "#c4e8e3",
             // Color when hovering over an item (the active selection)
-            "menu.selectionBackground": "#1f2e3a", 
+            "menu.selectionBackground": "#595b8e", 
             // Text color when hovering over an item
             "menu.selectionForeground": "#ffffff",
             
-            "terminal.foreground": "#a0dbfb",
+            "terminal.foreground": "#70abcd",
 
 
             // Background color of text that is actively selected/highlighted by the user
@@ -85,61 +85,90 @@
         "[Tokyo City No Italic]": {
             "textMateRules": [
                 {
-                    "scope": [
-                        "comment",
-                        "comment.block.documentation"
-                    ],
-                    "settings": {
-                        "foreground": "#787C99"
-                    }
+                    "scope": ["comment", "comment.block.documentation"],
+                    "settings": { "foreground": "#8B95A5", "fontStyle": "italic" }
                 },
                 {
-                    "scope": [
-                    "keyword",
-                    "keyword.control",
-                    "storage.type"
-                    ],
-                    "settings": { "foreground": "#7aa2f7" }
+                    "scope": ["keyword", "keyword.control", "storage.type", "keyword.operator"],
+                    "settings": { "foreground": "#A5B4FC" }
                 },
                 {
-                    "scope": [
-                    "variable",
-                    "variable.other",
-                    "identifier"
-                    ],
-                    "settings": { "foreground": "#c0caf5" }
+                    "scope": ["variable", "variable.other", "identifier"],
+                    "settings": { "foreground": "#C8D0DC" }
                 },
                 {
                     "scope": ["variable.parameter"],
-                    "settings": { "foreground": "#9ece6a" }
+                    "settings": { "foreground": "#DEC98A" }
                 },
                 {
-                    "scope": ["entity.name.function", "support.function"],
-                    "settings": { "foreground": "#7aa2f7" }
+                    "scope": ["entity.name.function", "support.function", "meta.function-call"],
+                    "settings": { "foreground": "#A8C8E8" }
                 },
                 {
-                    "scope": ["entity.name.type", "support.type", "storage.type"],
-                    "settings": { "foreground": "#ffd580" }
+                    "scope": ["entity.name.function.member", "meta.method-call"],
+                    "settings": { "foreground": "#B0CCE8" }
                 },
                 {
-                    "scope": ["string", "constant.character", "constant.other"],
-                    "settings": { "foreground": "#98c379" }
+                    "scope": ["entity.name.type", "support.type", "storage.type", "entity.name.class", "support.class"],
+                    "settings": { "foreground": "#D4C08A" }
+                },
+                {
+                    "scope": ["string", "string.quoted", "constant.character", "constant.other"],
+                    "settings": { "foreground": "#7CCAAA" }
+                },
+                {
+                    "scope": ["constant.numeric", "constant.language", "constant.other.boolean"],
+                    "settings": { "foreground": "#D998B8" }
+                },
+                {
+                    "scope": ["support.constant", "constant.character.escape"],
+                    "settings": { "foreground": "#6EC8D0" }
+                },
+                {
+                    "scope": ["entity.name.tag", "support.class.component", "meta.tag"],
+                    "settings": { "foreground": "#D89090" }
+                },
+                {
+                    "scope": ["entity.other.attribute-name", "support.type.property-name"],
+                    "settings": { "foreground": "#D8A878" }
+                },
+                {
+                    "scope": ["punctuation", "meta.brace"],
+                    "settings": { "foreground": "#8895A5" }
+                },
+                {
+                    "scope": ["meta.selector", "entity.name.scss", "entity.other.inherited-class"],
+                    "settings": { "foreground": "#B8B0D8" }
+                },
+                {
+                    "scope": ["support.function.magic", "support.function.magic.python"],
+                    "settings": { "foreground": "#78B8D8" }
+                },
+                {
+                    "scope": ["entity.name.function.decorator", "meta.decorator"],
+                    "settings": { "foreground": "#D8A878" }
                 }
-                ]
-            }
+            ]
+        }
     },
     "editor.semanticTokenColorCustomizations": {
         "enabled": true,
         "rules": {
-            "variable": "#c8cbd6",
-            "parameter": "#9ece6a",
-            "function": "#aec6fa",
-            "method": "#c4d5f9",
-            "property": "#9fb6ff",
-            "class": "#ffebc3",
-            "type": "#ffd580",
-            "namespace": "#ffd580",
-            "string": "#98c379"
+            "variable": "#C8D0DC",
+            "parameter": "#DEC98A",
+            "function": "#A8C8E8",
+            "method": "#B0CCE8",
+            "property": "#B8B0D8",
+            "class": "#D4C08A",
+            "type": "#DEC98A",
+            "namespace": "#D4C08A",
+            "string": "#7CCAAA",
+            "number": "#D998B8",
+            "boolean": "#D998B8",
+            "operator": "#A5B4FC",
+            "decorator": "#D8A878",
+            "builtin": "#78B8D8",
+            "enumMember": "#6EC8D0"
         }
     },
     "window.titleBarStyle": "custom"
